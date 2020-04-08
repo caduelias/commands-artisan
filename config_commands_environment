@@ -1,0 +1,26 @@
+buidar imagem a partir do arquivo dockerfile 
+	 sudo docker build -t laravel/trabalho .
+
+criando e mapeando uma porta para o container a partir da imagem criada 
+	sudo docker run --name revisao -it -d -p 8088:80 -v "$(pwd)":/var/www/html/ laravel/trabalho
+
+exibir lista de containers em execução 
+	sudo docker ps
+
+navegar pelo container 
+	sudo docker exec -it revisao bash
+
+instalar framework laravel
+	laravel new .	
+
+remover restrições de acesso da pasta "storage"
+	chmod -R 777 storage/
+
+instalar dependência para a biblioteca faker
+	composer require fzaninotto/faker
+
+criando o comando utilizando o artisan
+	php artisan make:command pessoa:cpf
+
+
+
