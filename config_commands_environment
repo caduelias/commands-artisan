@@ -2,7 +2,8 @@ buidar imagem a partir do arquivo dockerfile
 	 sudo docker build -t laravel/trabalho .
 
 criando e mapeando uma porta para o container a partir da imagem criada 
-	sudo docker run --name revisao -it -d -p 8088:80 -v "$(pwd)":/var/www/html/ laravel/trabalho
+	ubuntu -> sudo docker run --name container -it -d -p 8088:80 -v "$(pwd)":/var/www/html/ laravel/trabalho
+    windows -> docker run --name container -it -d -p 8088:80 -v ${PWD}:/var/www/html laravel/trabalho
 
 exibir lista de containers em execução 
 	sudo docker ps
